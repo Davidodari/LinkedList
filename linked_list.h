@@ -2,7 +2,8 @@
 #define LIST_LINKED_LIST_H
 
 struct node {
-  struct node* next;
+    char *data;
+    struct node *next;
 };
 
 /**
@@ -17,14 +18,13 @@ void add();
  * Remove node pointing to a group member from the list
  *
  */
-void remove();
-
+void delete();
 
 /**
  *
  * Display data in the list
  *
  */
-void list();
+void list(struct node* n);
 
 #endif
