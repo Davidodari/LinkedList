@@ -5,28 +5,19 @@
 int main() {
 
     struct node *head = NULL;
-    struct node *second = NULL;
-    struct node *third = NULL;
 
-    //Allocate Memory
-    head = (struct node *) malloc(sizeof(struct node));
-    second = (struct node *) malloc(sizeof(struct node));
-    third = (struct node *) malloc(sizeof(struct node));
+    add(&head, "X - SCT221-0146/2016");
 
-    head->data = "David Odari - SCT221-0146/2016";
-    head->next = second;
+    add(&head, "D- SCT221-0158/2016");
 
-    second->data = "Langat Kipkirui - SCT221-0158/2016";
-    second->next = third;
+    add(&head, "Y - SCT221-0177/2016");
 
-    third->data = "Maureen Wakagwi - SCT221-0177/2016";
-    third->next = NULL;
 
     //Display the list
     list(head);
 
     //Append to end of list
-    add(&head,"Kamula Isaac - SCT221-0144/2016");
+    add(&head, "Z - SCT221-0144/2016");
     list(head);
 
     return 0;
