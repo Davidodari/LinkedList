@@ -25,5 +25,9 @@ int main() {
     //Display the list
     list(head);
 
+    //Append to end of list
+    add(&head,"Kamula Isaac - SCT221-0144/2016");
+    list(head);
+
     return 0;
 }

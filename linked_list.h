@@ -11,7 +11,7 @@ struct node {
  * Takes in new group member data and appends the node to the list
  *
  */
-void add();
+void add(struct node** head_ref,char *data);
 
 /**
  *
