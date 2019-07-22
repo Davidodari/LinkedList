@@ -49,7 +49,7 @@ void remove_node(struct node **list, struct node *node)
     }
 }
 
-struct node *find_by_data(struct node *list, void *data) {
+struct node *find_by_data(struct node *list, char *data) {
     while (list) {
         if (list->data == data) break;
         list = list->next;

@@ -45,7 +45,7 @@ void list(struct node *head);
  *@param data
  *
  */
-struct node *find_by_data(struct node *list, void *data);
+struct node *find_by_data(struct node *list, char *data);
 
 /**
  * Removes a node from the list and frees up memory
