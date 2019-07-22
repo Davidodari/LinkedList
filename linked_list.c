@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "linked_list.h"
 
-void add(struct node **head_ref, char *data) {
+void insert(struct node **head_ref, char *data) {
 
     struct node *new_node = (struct node *) malloc(sizeof(struct node));
 

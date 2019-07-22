@@ -16,7 +16,7 @@ struct node {
  * @param data
  *
  */
-void add(struct node **head_ref, char *data);
+void insert(struct node **head_ref, char *data);
 
 /**
  *
