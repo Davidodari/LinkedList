@@ -22,16 +22,47 @@ void add(struct node **head_ref, char *data) {
     last->next = new_node;
 }
 
-void delete() {
-
+int delete(struct node **head_ref, char *data) {
+    if (*head_ref == NULL || data == NULL)
+        return -1;
+    remove_node(head_ref, find_by_data(*head_ref, data));
+    return 0;
 }
 
-void list(struct node *n) {
+void remove_node(struct node **list, struct node *node)
+{
+    struct node *tmp = NULL;
+    if (list == NULL || *list == NULL || node == NULL) return;
+
+    if (*list == node) {
+        *list = (*list)->next;
+        free(node);
+        node = NULL;
+    } else {
+        tmp = *list;
+        while (tmp->next && tmp->next != node) tmp = tmp->next;
+        if (tmp->next) {
+            tmp->next = node->next;
+            free(node);
+            node = NULL;
+        }
+    }
+}
+
+struct node *find_by_data(struct node *list, void *data) {
+    while (list) {
+        if (list->data == data) break;
+        list = list->next;
+    }
+    return list;
+}
+
+void list(struct node *head) {
     int count = 0;
-    while (n != NULL) {
+    while (head != NULL) {
         count++;
-        printf("%d %s \n", count, n->data);
-        n = n->next;
+        printf("%d %s \n", count, head->data);
+        head = head->next;
     }
     printf("\n");
 }

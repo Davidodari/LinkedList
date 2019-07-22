@@ -6,18 +6,21 @@ int main() {
 
     struct node *head = NULL;
 
-    add(&head, "X - SCT221-0146/2016");
+    add(&head, "David Odari - SCT221-0146/2016");
 
-    add(&head, "D- SCT221-0158/2016");
+    add(&head, "Langat Kipkirui - SCT221-0158/2016");
 
-    add(&head, "Y - SCT221-0177/2016");
+    add(&head, "Maureen Wakagwi - SCT221-0177/2016");
 
 
     //Display the list
     list(head);
 
     //Append to end of list
-    add(&head, "Z - SCT221-0144/2016");
+    add(&head, "Kamula Isaac - SCT221-0144/2016");
+    list(head);
+
+    delete(&head, "David Odari - SCT221-0146/2016");
     list(head);
 
     return 0;
